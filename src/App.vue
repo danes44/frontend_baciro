@@ -1,5 +1,5 @@
 <script setup>
-import HelloWorld from './components/Main.vue'
+import Main from './components/Main.vue'
 import Navbar from './components/Navbar.vue'
 import Footer from './components/Footer.vue'
 </script>
@@ -14,8 +14,9 @@ import Footer from './components/Footer.vue'
 
 <style scoped>
 
+
 .container{
-  width: 100vw;
+  /* width: 100vw; */
   min-height: 100vh;
   margin-right: auto;
   margin-left: auto;

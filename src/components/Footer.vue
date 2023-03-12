@@ -19,23 +19,55 @@
                     <h2 class="bold">Paroki Baciro</h2>
                 </div>
             </div>
-            <p>
-                Jl. Melati Wetan No.47,
-                Baciro, Kec. Gondokusuman, Kota Yogyakarta,
-                Daerah Istimewa Yogyakarta 55225, Indonesia
+            <p class="alamat">
+                Jl. Melati Wetan No.47, Baciro, Kec. Gondokusuman
             </p> 
+            <p class="alamat">
+                Kota Yogyakarta, Daerah Istimewa Yogyakarta 55225, Indonesia
+            </p>
         </div>
-        <div>
-            <h2>Contact Us</h2>
-            <a class="" role="button">
-                <i class="bi bi-instagram"></i>
-                gkr.baciro
-            </a>
+        <div class="vh100">
+            <h2 class="no-mt">Contact Us</h2>
+            <div class="flex-row">
+                <a class="" >
+                    <i class="bi bi-instagram"></i>
+                    gkr.baciro
+                </a>
+                <a class="" >
+                    <i class="bi bi-youtube"></i>
+                    Crembo Media
+                </a>
+                <a class="" >
+                    <i class="bi bi-envelope"></i>
+                    webparokibaciro@gmail.com
+                </a>
+                <a class="" >
+                    <i class="bi bi-telephone"></i>
+                    (0274) 564414
+                </a>
+            </div>
         </div>
     </div>
 </template>
 
 <style scoped>
+    .vh100{
+        height: 100%;
+    }
+    .no-mt{
+        margin-top: 0;
+    }
+    a:hover{
+        cursor: pointer;
+
+    }
+    .alamat{
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+    #container-footer>div>p:nth-child(2){
+        margin-top: 1.5rem !important;
+    }
     .bold{
         font-weight: bold;
     }
@@ -49,7 +81,7 @@
     }
     #container-footer{
         display: flex;
-        fill: 1 1 auto;
+        /* fill: 1 1 auto; */
         align-items: center;
         justify-content: space-between;
         padding: 2rem 8rem !important;
@@ -58,5 +90,10 @@
         display: flex;
         fill: 1 1 auto;
         align-items: center;
+    }
+    .flex-row{
+        display: flex;
+        flex-direction: column;
+        align-items: stretch
     }
 </style>

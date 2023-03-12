@@ -16,6 +16,7 @@
   -webkit-text-size-adjust: 100%;
 
   overflow-x: hidden;
+  min-height: 100vh;
 }
 
 /* warna */
@@ -23,14 +24,15 @@
   background-color: #9E2222;
 }
 
-a {
+/* a {
   font-weight: 500;
   color: #fff;
   text-decoration: inherit;
-}
+} */
 
 a:hover {
   font-weight: bold;
+  cursor: pointer;
 }
 
 body {
