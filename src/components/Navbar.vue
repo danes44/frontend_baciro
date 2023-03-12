@@ -73,6 +73,7 @@
 
   #logo>img{
     width: 178px;
+    margin-left: 1.5rem;
   }
   .navbar ul {
     list-style: none;
@@ -87,9 +88,13 @@
 
   .navbar ul li a {
     text-decoration: none;
-    /* color: #ffffff; */
+    color: #fff;
     padding: 0px 20px 0px 20px;
     font-size: 18px;
+  }
+
+  .choice {
+    color: #ff0000;
   }
 
   .navbar ul li.dropdown ul {
@@ -99,7 +104,7 @@
     padding: 10px;
     border: 1px solid #ff0000;
     border-radius: 20px;
-    /* color: red; */
+    color: #ff0000;
   }
 
   .navbar ul li.dropdown ul li {
@@ -109,5 +114,10 @@
   .navbar ul li.dropdown:hover ul {
     display: block;
   }
+
+  .navbar ul li.dropdown ul li a {
+  color: #ff0000;
+}
+
 
 </style>
