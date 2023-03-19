@@ -27,6 +27,13 @@ const router = new createRouter({
         meta: {title: 'Sejarah - GKR Baciro'},
         component: importPages('Sejarah'),
     },
+    {
+        path: "/tentang/strukturaldewanparoki",
+        name: "strukturaldewanparoki",
+        meta: {title: 'Struktural Dewan Paroki - GKR Baciro'},
+        component: importPages('StrukturalDewanParoki'),
+        // component: importComponent('AccordionItem'),
+    },
     // {
     // path: "/",
     // name: "sidebar",
