@@ -166,7 +166,8 @@ export default {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 20px;
+  padding: 20px 200px;
+  margin: 0 50px;
 }
 
 .content img {
@@ -194,7 +195,7 @@ export default {
 }
 
 .item-wilayah {
-  padding: 20px;
+  padding: 10px;
   text-align: center;
 }
 
