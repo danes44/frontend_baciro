@@ -20,13 +20,13 @@
     </div>
     <div id="menu">
       <ul>
-        <li><a href="#">Home</a></li>
+        <li><router-link to="/">Home</router-link></li>
         <!-- Tentang -->
         <li class="dropdown" @mouseover="showDropdown = true" @mouseleave="showDropdown = false">
           <a href="#">Tentang</a>
           <ul v-if="showDropdown">
-            <li><a href="Sejarah.vue">Sejarah</a></li>
-            <li><a href="StrukturalDewanParoki.vue">Struktural Dewan Paroki</a></li>
+            <li><router-link to="/tentang/sejarah">Sejarah</router-link></li>
+            <li><a href="/tentang/stukturaldewanparoki">Struktural Dewan Paroki</a></li>
             <li><a href="KomunitasUmat.vue">Komunitas Umat</a></li>
           </ul>
         </li>
@@ -66,6 +66,8 @@
   .navbar {
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    padding: 0 8rem !important;
   }
   #menu{
     margin-left: auto;
@@ -93,10 +95,6 @@
     font-size: 18px;
   }
 
-  .choice {
-    color: #ff0000;
-  }
-
   .navbar ul li.dropdown ul {
     position: absolute;
     display: none;
@@ -104,7 +102,6 @@
     padding: 10px;
     border: 1px solid #ff0000;
     border-radius: 20px;
-    color: #ff0000;
   }
 
   .navbar ul li.dropdown ul li {
@@ -116,8 +113,7 @@
   }
 
   .navbar ul li.dropdown ul li a {
-  color: #ff0000;
+  color: #9E2222;
 }
-
 
 </style>
