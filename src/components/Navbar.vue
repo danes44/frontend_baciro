@@ -1,16 +1,17 @@
 <script setup>
-  import { ref } from 'vue'
-  import image from "/logo_paroki_putih.png" 
+import { ref } from 'vue'
+import image from "/logo_paroki_putih.png" 
 </script>
 
 <script>
-  export default {
-    data() {
-      return {
-        showDropdown: false
-      }
+export default {
+  data() {
+    return {
+      showDropdown: false,
+      text: ''
     }
   }
+}
 </script>
 
 <template>
@@ -63,57 +64,61 @@
 </template>
 
 <style scoped>
-  .navbar {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 8rem !important;
-  }
-  #menu{
-    margin-left: auto;
-  }
-
-  #logo>img{
-    width: 178px;
-    margin-left: 1.5rem;
-  }
-  .navbar ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-  }
-
-  .navbar ul li {
-    margin-right: 20px;
-  }
-
-  .navbar ul li a {
-    text-decoration: none;
-    color: #fff;
-    padding: 0px 20px 0px 20px;
-    font-size: 18px;
-  }
-
-  .navbar ul li.dropdown ul {
-    position: absolute;
-    display: none;
-    background-color: #fff;
-    padding: 10px;
-    border: 1px solid #ff0000;
-    border-radius: 20px;
-  }
-
-  .navbar ul li.dropdown ul li {
-    margin: 5px 0;
-  }
-
-  .navbar ul li.dropdown:hover ul {
-    display: block;
-  }
-
-  .navbar ul li.dropdown ul li a {
-  color: #9E2222;
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  z-index: 99;
+  top: 0;
+  position: sticky;
 }
 
+#menu {
+  margin-left: auto;
+}
+
+#logo>img {
+  width: 178px;
+  margin-left: 1.5rem;
+}
+
+.navbar ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.navbar ul li {
+  margin-right: 20px;
+}
+
+.navbar ul li a {
+  text-decoration: none;
+  color: #fff;
+  padding: 0px 20px 0px 20px;
+  font-size: 18px;
+}
+
+.navbar ul li.dropdown ul {
+  position: absolute;
+  display: none;
+  background-color: #fff;
+  padding: 10px;
+  border: 1px solid #ff0000;
+  border-radius: 20px;
+}
+
+.navbar ul li.dropdown ul li {
+  margin: 5px 0;
+}
+
+.navbar ul li.dropdown:hover ul {
+  display: block;
+}
+
+.navbar ul li.dropdown ul li a {
+  color: #9E2222;
+}
 </style>
