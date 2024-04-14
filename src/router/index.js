@@ -28,10 +28,11 @@ const router = new createRouter({
         component: importPages('Sejarah'),
     },
     {
-        path: "/tentang/stukturaldewanparoki",
-        name: "stukturaldewanparoki",
-        meta: {title: 'Stuktural Dewan Paroki - GKR Baciro'},
-        component: importPages('StukturalDewanParoki'),
+        path: "/tentang/strukturaldewanparoki",
+        name: "strukturaldewanparoki",
+        meta: {title: 'Struktural Dewan Paroki - GKR Baciro'},
+        component: importPages('StrukturalDewanParoki'),
+        // component: importComponent('AccordionItem'),
     },
     // {
     // path: "/",

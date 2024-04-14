@@ -27,35 +27,35 @@ export default {
           <a href="#">Tentang</a>
           <ul v-if="showDropdown">
             <li><router-link to="/tentang/sejarah">Sejarah</router-link></li>
-            <li><a href="/tentang/stukturaldewanparoki">Struktural Dewan Paroki</a></li>
-            <li><a href="KomunitasUmat.vue">Komunitas Umat</a></li>
+            <li><router-link to="/tentang/strukturaldewanparoki">Struktural Dewan Paroki</router-link></li>
+            <li><router-link to="/tentang/komunitasumat">Komunitas Umat</router-link></li>
           </ul>
         </li>
         <!-- Layanan -->
         <li class="dropdown" @mouseover="showDropdown = true" @mouseleave="showDropdown = false">
           <a href="#">Layanan</a>
           <ul v-if="showDropdown">
-            <li><a href="Sakramen.vue">Sakramen</a></li>
-            <li><a href="Sekretariat.vue">Sekretariat</a></li>
-            <li><a href="Keuskupan.vue">Keuskupan</a></li>
+            <li><router-link to="/layanan/sakramen">Sakramen</router-link></li>
+            <li><router-link to="/layanan/sekretariat">Sekretariat</router-link></li>
+            <li><router-link to="/layanan/keuskupan">Keuskupan</router-link></li>
           </ul>
         </li>
         <!-- Kegiatan -->
         <li class="dropdown" @mouseover="showDropdown = true" @mouseleave="showDropdown = false">
           <a href="#">Kegiatan</a>
           <ul v-if="showDropdown">
-            <li><a href="#">Option 1</a></li>
-            <li><a href="#">Option 2</a></li>
-            <li><a href="#">Option 3</a></li>
+            <li><router-link to="/kegiatan/#">#</router-link></li>
+            <li><router-link to="/kegiatan/#">#</router-link></li>
+            <li><router-link to="/kegiatan/#">#</router-link></li>
           </ul>
         </li>
         <!-- Media -->
         <li class="dropdown" @mouseover="showDropdown = true" @mouseleave="showDropdown = false">
           <a href="#">Media</a>
           <ul v-if="showDropdown">
-            <li><a href="#">Option 1</a></li>
-            <li><a href="#">Option 2</a></li>
-            <li><a href="#">Option 3</a></li>
+            <li><router-link to="/media/#">#</router-link></li>
+            <li><router-link to="/media/#">#</router-link></li>
+            <li><router-link to="/media/#">#</router-link></li>
           </ul>
         </li>
       </ul>
