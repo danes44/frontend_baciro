@@ -54,8 +54,8 @@ const myObject = reactive(
   <section class="gallery">
     <swiper :modules="modules" :centeredSlides="true" :space-between="50" :pagination="{
       dynamicBullets: true,
-    }" :loop="true" :slidesPerView="1">
-      <swiper-slide v-for="image in images">
+    }" :loop="true" :slidesPerView="1" navigation>
+      <swiper-slide v-for="(image, index) in images" :key="index">
         <img :src="image" alt="" height="590">
       </swiper-slide>
     </swiper>
@@ -64,7 +64,7 @@ const myObject = reactive(
     <section class="berita">
       <h2 class="text-xl"><span class="text-red">BERITA</span> TERKINI</h2>
       <div class="artikel-wrapper">
-        <div class="artikel" v-for="(value) in myObject">
+        <div class="artikel" v-for="(value, index) in myObject" :key="index">
           <div class="image-wrapper">
             <img :src="value.artikel.image" loading="lazy" alt="Galeri" height="440" class="foto rounded-xl">
           </div>
@@ -116,6 +116,14 @@ const myObject = reactive(
 </template>
 
 <style lang="scss" scoped>
+.container {
+  /* width: 100vw; */
+  min-height: 100vh;
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 1440px;
+}
+
 section {
   h2 {
     text-align: center;
@@ -171,7 +179,6 @@ section.gallery {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 20px;
 
   div.swiper-slide {
     // padding-inline: 20px;

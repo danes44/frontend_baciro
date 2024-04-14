@@ -10,7 +10,7 @@ const count = ref(0)
 </script>
 
 <template>
-    <div class="bg-red">
+    <div class="bg-brown">
         <div id="container-footer">
             <div>
                 <div id="logo-gereja" class="flex">

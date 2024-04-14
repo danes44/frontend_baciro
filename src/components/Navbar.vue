@@ -1,64 +1,59 @@
 <script setup>
 import { ref } from 'vue'
-import image from "/logo_paroki_putih.png" 
-</script>
+import image from "/logo_paroki_putih.png"
 
-<script>
-export default {
-  data() {
-    return {
-      showDropdown: false,
-      text: ''
-    }
-  }
-}
+const showDropdown = ref(false);
 </script>
 
 <template>
-  <div class="navbar bg-red">
-    <div id="logo">
-      <img :src="image">
-    </div>
-    <div id="menu">
-      <ul>
-        <li><router-link to="/">Home</router-link></li>
-        <!-- Tentang -->
-        <li class="dropdown" @mouseover="showDropdown = true" @mouseleave="showDropdown = false">
-          <a href="#">Tentang</a>
-          <ul v-if="showDropdown">
-            <li><router-link to="/tentang/sejarah">Sejarah</router-link></li>
-            <li><router-link to="/tentang/strukturaldewanparoki">Struktural Dewan Paroki</router-link></li>
-            <li><router-link to="/tentang/komunitasumat">Komunitas Umat</router-link></li>
+  <div class="bg-brown nav-position">
+    <div class="container-nav">
+      <div class="navbar ">
+        <div id="logo">
+          <img :src="image">
+        </div>
+        <div id="menu">
+          <ul>
+            <li><router-link to="/">Home</router-link></li>
+            <!-- Tentang -->
+            <li class="dropdown" @mouseover="showDropdown = true" @mouseleave="showDropdown = false">
+              <a href="#">Tentang</a>
+              <ul v-if="showDropdown">
+                <li><router-link to="/tentang/sejarah">Sejarah</router-link></li>
+                <li><router-link to="/tentang/strukturaldewanparoki">Struktural Dewan Paroki</router-link></li>
+                <li><router-link to="/tentang/komunitasumat">Komunitas Umat</router-link></li>
+              </ul>
+            </li>
+            <!-- Layanan -->
+            <li class="dropdown" @mouseover="showDropdown = true" @mouseleave="showDropdown = false">
+              <a href="#">Layanan</a>
+              <ul v-if="showDropdown">
+                <li><router-link to="/layanan/sakramen">Sakramen</router-link></li>
+                <li><router-link to="/layanan/sekretariat">Sekretariat</router-link></li>
+                <li><router-link to="/layanan/keuskupan">Keuskupan</router-link></li>
+              </ul>
+            </li>
+            <!-- Kegiatan -->
+            <li class="dropdown" @mouseover="showDropdown = true" @mouseleave="showDropdown = false">
+              <a href="#">Kegiatan</a>
+              <ul v-if="showDropdown">
+                <li><router-link to="/kegiatan/#">#</router-link></li>
+                <li><router-link to="/kegiatan/#">#</router-link></li>
+                <li><router-link to="/kegiatan/#">#</router-link></li>
+              </ul>
+            </li>
+            <!-- Media -->
+            <li class="dropdown" @mouseover="showDropdown = true" @mouseleave="showDropdown = false">
+              <a href="#">Media</a>
+              <ul v-if="showDropdown">
+                <li><router-link to="/media/#">#</router-link></li>
+                <li><router-link to="/media/#">#</router-link></li>
+                <li><router-link to="/media/#">#</router-link></li>
+              </ul>
+            </li>
           </ul>
-        </li>
-        <!-- Layanan -->
-        <li class="dropdown" @mouseover="showDropdown = true" @mouseleave="showDropdown = false">
-          <a href="#">Layanan</a>
-          <ul v-if="showDropdown">
-            <li><router-link to="/layanan/sakramen">Sakramen</router-link></li>
-            <li><router-link to="/layanan/sekretariat">Sekretariat</router-link></li>
-            <li><router-link to="/layanan/keuskupan">Keuskupan</router-link></li>
-          </ul>
-        </li>
-        <!-- Kegiatan -->
-        <li class="dropdown" @mouseover="showDropdown = true" @mouseleave="showDropdown = false">
-          <a href="#">Kegiatan</a>
-          <ul v-if="showDropdown">
-            <li><router-link to="/kegiatan/#">#</router-link></li>
-            <li><router-link to="/kegiatan/#">#</router-link></li>
-            <li><router-link to="/kegiatan/#">#</router-link></li>
-          </ul>
-        </li>
-        <!-- Media -->
-        <li class="dropdown" @mouseover="showDropdown = true" @mouseleave="showDropdown = false">
-          <a href="#">Media</a>
-          <ul v-if="showDropdown">
-            <li><router-link to="/media/#">#</router-link></li>
-            <li><router-link to="/media/#">#</router-link></li>
-            <li><router-link to="/media/#">#</router-link></li>
-          </ul>
-        </li>
-      </ul>
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -69,6 +64,10 @@ export default {
   align-items: center;
   justify-content: space-between;
   padding: 0 20px;
+
+}
+
+.nav-position {
   z-index: 99;
   top: 0;
   position: sticky;
@@ -79,8 +78,7 @@ export default {
 }
 
 #logo>img {
-  width: 178px;
-  margin-left: 1.5rem;
+  height: 84px;
 }
 
 .navbar ul {
@@ -103,11 +101,11 @@ export default {
 
 .navbar ul li.dropdown ul {
   position: absolute;
+  top: 91px;
   display: none;
   background-color: #fff;
   padding: 10px;
-  border: 1px solid #ff0000;
-  border-radius: 20px;
+  border-top: 8px solid #795000;
 }
 
 .navbar ul li.dropdown ul li {

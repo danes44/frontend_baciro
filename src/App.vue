@@ -6,9 +6,9 @@ import Footer from './components/Footer.vue'
 
 <template>
   <Navbar msg="Vite" />
-  <div class="container">
-    <router-view />
-  </div>
+  <!-- <div class="container"> -->
+  <router-view />
+  <!-- </div> -->
   <Footer />
 </template>
 
@@ -34,4 +34,5 @@ import Footer from './components/Footer.vue'
 
 .logo.vue:hover {
   filter: drop-shadow(0 0 2em #42b883aa);
-}</style>
+}
+</style>

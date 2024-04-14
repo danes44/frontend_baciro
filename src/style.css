@@ -23,6 +23,9 @@
 .bg-red {
   background-color: #9E2222;
 }
+.bg-brown {
+  background-color: #412B00;
+}
 
 a:hover {
   font-weight: bold;
@@ -40,4 +43,10 @@ body {
 #app {
   /* max-width: 1280px;  */
   margin: 0 auto;
+}
+
+.container-nav {
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 1440px;
 }
